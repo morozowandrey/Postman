@@ -1,0 +1,99 @@
+.navigation {
+    background-image: url(../../images/client-picture.jpg);
+    background-size: cover;
+
+    padding: 0 30px;
+
+    &-box {
+        float: right;
+    }
+
+    &__logo2 {
+        margin: 30px 40px 65px 45%;
+        display: block;
+    }
+
+    &__logo {
+        margin: 30px 40px 65px 45%;
+        display: block;
+    }
+
+    &-list {
+        list-style: none;
+        margin-right: 25px;
+        display: inline-block;
+        margin-bottom: 50px;
+        padding: 0;
+        width: 265px;
+
+        &__item {
+            margin-bottom: 37px;
+
+            font-family: secondary-ff;
+            font-size: 25px;
+            text-align: right;
+
+            line-height: 24.4px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        &__item:hover {
+            font-family: main-ff;
+            height: 24.4px;
+        }
+
+        &__item:hover:before {
+            line-height: 24.4px;
+            content: "\f2ff";
+            margin-right: 7px;
+
+            font-family: third-ff;
+            vertical-align: middle;
+        }
+
+        &__item:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+
+    &-slider {
+        width: 1px;
+        height: 315px;
+
+        border: 1px solid white;
+        border-style: dashed;
+
+        display: inline-block;
+
+        &__dot {
+            width: 14px;
+            height: 14px;
+            margin: -5px 0 0 -7.5px;
+            background-color: white;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        background-position-x: 25%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .navigation {
+        padding: 0 10px;
+        background-image: url(../../images/client-picture-mobile.jpg);
+        background-size: cover;
+    }
+
+    .navigation-box {
+        margin-right: 10px;
+    }
+
+    .navigation-list {
+        margin-right: 15px;
+    }
+}
