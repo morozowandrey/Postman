@@ -1,0 +1,17 @@
+{
+  "name": "default",
+  "description": "project skeleton",
+  "main": "gulpfile.js",
+  "authors": [
+    "Andrew Morozow <andrey940@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
