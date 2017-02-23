@@ -1,0 +1,254 @@
+///////////////////////dark slider/////////////////////////////
+
+.dark-block, .white-block {
+    padding: 0 30px;
+
+    &__content {
+        width: 39%;
+        float: left;
+    }
+
+    &__heading {
+        width: 160px;
+        position: relative;
+
+        margin: 60px 0 70px 25%;
+        padding: 17px 0;
+
+        font-size: 20px;
+        letter-spacing: 0.8px;
+        text-align: center;
+        text-transform: uppercase;
+
+        background-color: white;
+        color: black;
+    }
+
+    &__heading:after {
+        content: url(../../images/white-triangle.jpg);
+
+        position: absolute;
+        bottom: -25%;
+        left: 44%;
+    }
+
+    &__text-box {
+        margin-bottom: 40px;
+    }
+
+    &__text, &__list-item {
+        max-width: 443px;
+
+        font-family: secondary-ff;
+        font-size: 19px;
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+
+        color: white;
+    }
+
+    &__list-box {
+        
+    }
+
+    &__list {
+        padding-left: 20px;
+        list-style: none;
+
+        &-item {
+            position: relative;
+        }
+
+        &-item:before {
+           content: "\f27d";
+
+           font-family: third-ff;
+           position: absolute;
+           left: -24px; 
+        }
+    }
+
+    &__slider-box {
+        width: 61%;
+        float: left;
+        margin-top: 60px;
+    }
+
+    &__slider {
+        float: right;
+        width: 100%;
+        
+        &-item {
+            color: white;
+        }
+
+        &-caption {
+            width: 338px;
+            height: 60px;
+
+            margin-bottom: 110px;
+
+            float: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: dandelion;
+        }
+    }
+}
+
+.slider-caption {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+}
+
+.slider-item__image {
+    width: 100%;
+    height: auto;
+
+}
+
+@media screen and (max-width: 768px) {
+    .dark-block__content, .white-block__content {
+        width: 100%;
+        padding: 0 30px 0 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dark-block__heading, .white-block__heading {
+        margin: 60px auto 70px;
+    }
+
+    .dark-block__slider-box, .white-block__slider-box {
+        width: 100%;
+    }
+
+    .dark-block__slider-caption, .white-block__slider-caption {
+        width: 310px;
+        margin: 0 auto 110px;
+
+        float: none;
+    }
+
+    .slick-dots {
+        right: 0;
+        left: 0;
+    }
+
+    .dark-block, .white-block {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .dark-block__heading:after, .white-block__heading:after {
+        bottom: -26%;
+        left: 43%;
+    }
+}
+
+///////////////////////EO dark slider//////////////////////////
+
+
+///////////////////////white slider/////////////////////////////
+
+.white-block {
+    background-color: white;
+
+    &__content {
+        padding-left: 30px;
+    }
+
+    &__heading {
+        width: 250px;
+        background-color: black;
+        color: white;
+    }
+
+    &__heading:after {
+        content: url(../../images/black-triangle.jpg);
+    }
+
+    &__text-box {
+    }
+
+    &__text, &__list-item {
+        color: black;
+    }
+
+    &__list-box {
+        
+    }
+
+    &__list {
+        padding-left: 20px;
+        list-style: none;
+
+        &-item {
+            position: relative;
+        }
+
+        &-item:before { 
+        }
+    }
+
+    &__slider-box {
+    }
+
+    &__slider {
+        float: left;
+        
+        &-item {
+        }
+
+        &-caption {
+            float: left;
+        }
+    }
+}
+
+.white-block__slider .slick-dots {
+    left: -20px;
+    right: inherit;
+}
+
+.slider-caption {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+}
+
+.slider-item__image {
+    width: 100%;
+    height: auto;
+
+}
+
+@media screen and (max-width: 768px) {
+    .white-block__list-box {
+    }
+
+    .white-block__slider-caption {
+        width: 310px;
+        margin: 0 auto 110px;
+
+        float: none;
+    }
+
+    .white-block__slider .slick-dots {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+///////////////////////EO white slider//////////////////////////
