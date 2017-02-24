@@ -1,0 +1,199 @@
+.awards {
+    margin: 0 30px;
+
+    &-heading {
+
+        &__text {
+            width: 160px;
+            position: relative;
+
+            margin: 60px 0 70px 20%;
+            padding: 17px 0;
+
+            font-size: 20px;
+            letter-spacing: 0.8px;
+            text-align: center;
+            text-transform: uppercase;
+
+            background-color: white;
+            color: black;
+        }
+
+        &__text:after {
+             content: url(../images/white-triangle.jpg);
+
+            position: absolute;
+            bottom: -25%;
+            left: 44%;
+        }
+
+        &__text:before {
+             content: '';
+            background: warm-grey;
+            height: 1px;
+            width: 1000%;
+            margin-top: 5px;
+            position: absolute;
+            /* right: 4px; */
+            bottom: -10px;
+            right: -100%;
+            left: -949%;
+            z-index: 5;
+        }
+    }
+}
+
+.preview {
+    width: 48.5%;
+    margin: 0 0 60px 0;
+
+    display: inline-block;
+    float: left;
+    position: relative;
+
+    &__image {
+        position: relative;
+    }
+
+    &-description {
+
+        &__text {
+            // padding: 15px 19% 0 35%;
+
+            width: 46%;
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+
+            &-content {
+                font-size: 20px;
+                letter-spacing: 0.4px;
+                text-transform: uppercase;
+
+                color: white;
+            }
+        }
+    }
+}
+
+.preview:nth-child(even) {
+    margin-left: 2.5%;
+}
+
+.award {
+    width: 185px;
+    height: 160px;
+    margin-top: -80px;
+
+    position: relative;
+    float: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: dandelion;
+
+    &__image {
+        margin-bottom: 13px;
+    }
+
+    &__text {
+        font-family: forth-ff;
+        font-size: 20px;
+        letter-spacing: 0.4px;
+        text-align: center;
+
+        color: black;
+
+        &_left {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.preview-video {
+        display: none;
+
+    &__play {
+        color: white;
+    }
+
+    &-box {
+    }
+}
+
+.preview__image:hover + .preview-video {
+    background-color: rgba(100, 100, 100, 0.7);
+
+    height: 81.5%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+}
+
+.preview-video__play {
+        color: white;
+        padding: 23px;
+        border: 1px solid white;
+        border-radius: 30px;
+        width: 230px;
+        height: 60px;
+        font-size: 20px;
+        line-height: 0.7;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+@media screen and (max-width: 940px) {
+    
+    .preview {
+        width: 100%;
+    }
+
+    .preview-description__text {
+        width: 30.5%;
+        margin-top: 0;
+    }
+
+    .preview:nth-child(even) {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+
+    .awards {
+        margin: 0;
+    }
+
+    .awards-heading__text {
+        margin: 60px auto 70px;
+    }
+
+    .award {
+        margin-top: -50px;
+    }
+    
+    .preview {
+        width: 100%;
+    }
+
+    .preview2, .preview3 {
+        display: none;
+    }
+
+    .preview-description__text {
+        width: 40%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

@@ -1,5 +1,5 @@
 .navigation {
-    background-image: url(../../images/client-picture.jpg);
+    background-image: url(../images/client-picture.jpg);
     background-size: cover;
 
     padding: 0 30px;
@@ -26,14 +26,18 @@
         padding: 0;
         width: 265px;
 
+        &__link {
+            // margin-bottom: 37px;
+        }
+
         &__item {
-            margin-bottom: 37px;
+            margin-bottom: 36px;
 
             font-family: secondary-ff;
             font-size: 25px;
             text-align: right;
 
-            line-height: 24.4px;
+            line-height: 25.4px;
             color: #fff;
             cursor: pointer;
         }
@@ -53,7 +57,7 @@
         }
 
         &__item:last-of-type {
-            margin-bottom: 0px;
+            // margin-bottom: 0px;
         }
     }
 
@@ -76,6 +80,19 @@
     }
 }
 
+.navigation-list__item_current {
+    font-family: main-ff;
+    height: 24.4px;
+}
+.navigation-list__item_current:before {
+    line-height: 24.4px;
+            content: "\f2ff";
+            margin-right: 7px;
+
+            font-family: third-ff;
+            vertical-align: middle;
+}
+
 @media screen and (max-width: 768px) {
     .navigation {
         background-position-x: 25%;
@@ -85,7 +102,7 @@
 @media screen and (max-width: 460px) {
     .navigation {
         padding: 0 10px;
-        background-image: url(../../images/client-picture-mobile.jpg);
+        background-image: url(../images/client-picture-mobile.jpg);
         background-size: cover;
     }
 
