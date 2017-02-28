@@ -23,7 +23,7 @@
              content: url(../images/white-triangle.jpg);
 
             position: absolute;
-            bottom: -25%;
+            bottom: -26%;
             left: 44%;
         }
 
@@ -35,7 +35,7 @@
             margin-top: 5px;
             position: absolute;
             /* right: 4px; */
-            bottom: -10px;
+            bottom: -11px;
             right: -100%;
             left: -949%;
             z-index: 5;
@@ -115,32 +115,11 @@
 }
 
 .preview-video {
-        display: none;
 
     &__play {
         color: white;
-    }
+        cursor: pointer;
 
-    &-box {
-    }
-}
-
-.preview__image:hover + .preview-video {
-    background-color: rgba(100, 100, 100, 0.7);
-
-    height: 81.5%;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    top: 0;
-}
-
-.preview-video__play {
-        color: white;
         padding: 23px;
         border: 1px solid white;
         border-radius: 30px;
@@ -152,10 +131,43 @@
         text-align: center;
     }
 
+    &-box {
+        opacity: 0;
+
+        width: 100%;
+        height: 81.4%;
+
+        position: absolute;
+        top: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-box:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 1;
+    }
+
+    &-wrapper {
+        position: relative;
+    }
+}
+
+.mfp-content {
+    width: 640px !important;
+}
+
+.video-popup {
+    width: 640px;
+    height: 360px;
+}
+
 @media screen and (max-width: 940px) {
     
     .preview {
-        width: 100%;
+        width: 66%;
     }
 
     .preview-description__text {
@@ -165,6 +177,23 @@
 
     .preview:nth-child(even) {
         margin-left: 0;
+    }
+
+    .preview-video-box {
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+
+    .video-popup {
+        width: 360px;
+        height: 240px;
+        margin: 0 auto;
+    }
+
+    .mfp-content {
+        width: 360px !important;
     }
 }
 
@@ -195,5 +224,18 @@
         position: absolute;
         bottom: 0;
         right: 0;
+    }
+}
+
+@media screen and (max-width: 374px) {
+
+    .video-popup {
+        width: 240px;
+        height: 135px;
+        margin: 0 auto;
+    }
+
+    .mfp-content {
+        width: 240px !important;
     }
 }
