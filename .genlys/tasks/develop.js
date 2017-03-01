@@ -22,13 +22,6 @@ gulp.task('dev', [
     'bower',
 ]);
 
-// gulp.task('config', function () {
-//     gulp.src('.genlys/constants/staging.coffee')
-//         .pipe(coffee({bare: true}))
-//         .pipe(rename('config.js'))
-//         .pipe(gulp.dest('build/js/config/'))
-//
-// });
 gulp.task('view', function () {
     gulp.src(config.path.app.html) //Выберем файлы по нужному пути
         .pipe(gulp.dest(config.path.dev.html)) //Бросим их в папку build
@@ -52,11 +45,11 @@ gulp.task('script', function () {
 // });
 
 gulp.task('style', function () {
-    gulp.src(config.path.app.stylus) //Выберем наш landing.scss
+    gulp.src(config.path.app.stylus) //Выберем все стили в формате .styl
         .pipe(stylus())
         .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
-        .pipe(gulp.dest(config.path.dev.css)) //И в build
+        .pipe(gulp.dest(config.path.dev.css)) //И в dev
         .pipe(reload({stream: true}));
 });
 

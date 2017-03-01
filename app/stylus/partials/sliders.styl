@@ -25,22 +25,20 @@
     }
 
     &__heading:after {
-        content: url(../images/white-triangle.jpg);
+        content: url(../images/white-triangle.svg);
 
         position: absolute;
-        bottom: -26%;
-        left: 44%;
+        bottom: -34%;
+        left: 40%;
     }
 
     &__heading:before {
         content: '';
         background: warm-grey;
-        height: 0.5px;
+        height: 1px;
         width: 1000%;
-        margin-top: 5px;
         position: absolute;
-        /* right: 4px; */
-        bottom: -11px;
+        bottom: -16px;
         right: -100%;
         left: -949%;
         z-index: 5;
@@ -161,10 +159,6 @@
 }
 
 @media screen and (max-width: 460px) {
-    .dark-block__heading:after, .white-block__heading:after {
-        bottom: -26%;
-        left: 43%;
-    }
 
     .dark-block__slider-box, .white-block__slider-box {
         margin-bottom: 0px;
@@ -195,12 +189,14 @@
     }
 
     &__heading:after {
-        content: url(../images/black-triangle.jpg);
+        content: url(../images/black-triangle.svg);
+        fill: black;
+        left: 44%;
     }
 
     &__heading:before {
         right: -949%;
-        left: 48.5%;
+        left: 50.5%;
     }
 
     &__text-box {

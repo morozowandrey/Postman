@@ -9,14 +9,12 @@ var gulp = require('gulp'),
 
     config = require('../config');
 
-
-// gulp.task('config:production', function () {
-//     gulp.src('.genlys/constants/production.coffee')
-//         .pipe(coffee({bare: true}))
-//         .pipe(rename('config.js'))
-//         .pipe(gulp.dest('build/js/config/'))
-//
-// });
+gulp.task('production', [
+    'view:production',
+    'compress:production',
+    'font:production',
+    'img:production',
+])
 
 gulp.task('font:production', function () {
     gulp.src('dev/fonts/**')
@@ -27,7 +25,7 @@ gulp.task('img:production', function () {
         .pipe(gulp.dest(config.path.production.images));
 });
 gulp.task('view:production', function () {
-    gulp.src('dev/views/**')
+    gulp.src('dev/veiv/**')
         // .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest(config.path.production.views));
 });
@@ -64,10 +62,3 @@ gulp.task('compress:production', function () {
         .pipe(gulp.dest(config.path.production.main));
 });
 
-
-gulp.task('production', [
-    'view:production',
-    'compress:production',
-    'font:production',
-    'img:production',
-])

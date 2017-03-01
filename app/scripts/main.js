@@ -17,7 +17,7 @@ $(document).ready(function(){
     $('a[href^="#"]').on("click", function (e) {
         e.preventDefault();
 
-        var elementClick = $(this).attr("href");
+        var elementClick = $(this).attr("href"); 
         var destination = $(elementClick).offset().top;
 
         $('body').animate({
@@ -26,7 +26,7 @@ $(document).ready(function(){
     });
 
   //NAV
-  $('.navigation-list__link').on('click', function(e){
+  $('.navigation-list__link').hover(function(e){
     // e.preventDefault();
 
     var coordLink =  $(this).position();
