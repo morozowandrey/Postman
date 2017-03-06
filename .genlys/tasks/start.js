@@ -6,7 +6,12 @@ var gulp = require('gulp'),
     config = require('../config');
 
 
-gulp.task('start', ['dev', 'webserver', 'watch']);
+gulp.task('start', [
+    'dev',
+    'webserver',
+    'watch'
+]);
+
 
 gulp.task('webserver', function () {
     browserSync(config.serverConfig);
@@ -17,9 +22,6 @@ gulp.task('watch', function () {
     watch([config.path.watch.html], function (event, cb) {
         gulp.start(['view']);
     });
-    // watch([config.path.watch.sass], function (event, cb) {
-    //     gulp.start(['style']);
-    // });
     watch([config.path.watch.stylus], function (event, cb) {
         gulp.start(['style']);
     });

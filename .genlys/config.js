@@ -8,24 +8,26 @@ module.exports = {
             'js': 'dev/js/',
             'bower': 'dev/bower_components/'
         },
+
         'app': {
             'html': 'app/**/*.html',
-            // 'sass': 'app/sass/*.scss',
             'stylus': 'app/stylus/*.styl',
+            'css': 'app/css/**/*.*',
             'images': 'app/images/**/*.*',
             'fonts': 'app/fonts/**/*.*',
             'scripts': 'app/scripts/**/*.js'
         },
+        
         'production': {
             'main': 'production/',
+            'css': 'production/styles/',
             'fonts': 'production/fonts',
             'images': 'production/images',
-            'views': 'production/views',
-            'js': 'production/js'
+            'views': 'production/',
+            'js': 'production/js/'
         },
         'watch': {
             'html': 'app/**/*.html',
-            // 'sass': 'app/sass/**/*.scss',
             'stylus': 'app/stylus/**/*.styl',
             'images': 'app/images/**/*.*',
             'fonts': 'app/fonts/**/*.*',
