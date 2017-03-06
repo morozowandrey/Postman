@@ -27,7 +27,7 @@
     &__header:before {
         content: '';
         background: warm-grey;
-        height: 0.5px;
+        height: 1px;
         width: 1000%;
         margin-top: 5px;
         position: absolute;
@@ -38,15 +38,15 @@
     }
 
     &-nav {
-        align-items: baseline;
-        justify-content: space-around;
-        padding: 0 30% 0 15%;
+        padding: 0 15% 0 20%;
 
         margin: 25px 0 60px;
 
         &__box1, &__box2, &__box3 {
-            flex-direction: column;
-            align-items: initial;
+            display: inline-block;
+            vertical-align: top;
+
+            margin-right: 15%;
         }
 
         &__box2 {
@@ -54,6 +54,7 @@
         }
 
         &__box3 {
+            margin-right: 0;
 
         }
 
@@ -62,6 +63,8 @@
             font-size: 20px;
             line-height: 1.5;
             letter-spacing: 0.4px;
+
+            display: table;
 
             color: warm-grey;
         }
@@ -94,31 +97,71 @@
 
 }
 
+@media screen and (max-width: 835px) {
+    .footer-nav__box1, .footer-nav__box2 {
+        margin-right: 10%;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
     .footer-contacts {
-        display: flex;
+        display: inline-block;
     }
 
     .footer-nav {
-        justify-content: space-between;
         padding: 0;
     }
 
     .footer-contacts__fb, .footer-contacts__youtube {
-        display: flex;
-        margin-left: 20px;
+        display: inline-block;
+        margin: 5px 0 0 20px;
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+    .footer-contacts {
+        display: inline-block;
+    }
+
+    .footer-nav  {
+        padding: 0;
+    }
+
+    .footer-nav__box1, .footer-nav__box2, .footer-nav__box3, .footer-contacts  {
+        display: block;
+        margin: 0 auto;
+        width: 130px;
+    }
+
+    .footer-contacts__fb, .footer-contacts__youtube {
+        display: inline-block;
+        margin: 30px 0 0 20px;
+        font-size: 30px;
+    }
+
+    .footer-contacts__fb {
+        margin: 30px 0 0 0px;
+    }
+
+    .footer__logo-box {
+        margin-left: 60px;
+        width: 175px;
+    }
+
+    .footer__header:before {
+        left: 127.5%;
     }
 
 }
 
 @media screen and (max-width: 520px) {
     .footer {
-        display: flex;
     }
 
     .footer-nav {
-        justify-content: center;
-        flex-direction: column;
         padding: 0;
     }
 
