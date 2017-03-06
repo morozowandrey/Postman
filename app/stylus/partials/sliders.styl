@@ -48,7 +48,18 @@
         margin-bottom: 40px;
     }
 
-    &__text, &__list-item {
+    &__text > p {
+        max-width: 443px;
+
+        font-family: secondary-ff;
+        font-size: 19px;
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+
+        color: white;
+    }
+
+    &__list-item {
         max-width: 443px;
 
         font-family: secondary-ff;
@@ -199,10 +210,7 @@
         left: 50.5%;
     }
 
-    &__text-box {
-    }
-
-    &__text, &__list-item {
+    &__text > p, &__list-item {
         color: black;
     }
 
