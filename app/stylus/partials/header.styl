@@ -27,7 +27,7 @@
 
     position: absolute;
     left: 0;
-    z-index: 2;
+    z-index: 3;
   }
 
   &-menu__button:hover {
@@ -72,6 +72,64 @@
       color: warm-grey;
     }
   }
+
+  &-menu {
+    max-width: 450px;
+    width: 100%;
+
+    padding: 170px 80px 90px;
+
+    position: absolute;
+    z-index: 10;
+
+    text-align: left;
+    background-color: dandelion;
+
+    &__item {
+      margin-bottom: 40px;
+
+      display: block;
+
+      font-family: secondary-ff;
+      font-size: 25px;
+      color: black;
+      white-space: nowrap;
+      line-height: 30px;
+    }
+
+    &__item:last-of-type  {
+      margin-bottom: 0;
+    }
+
+    &__item:hover {
+      font-family: main-ff;
+    }
+
+    &__item:hover:before {
+        line-height: 24.4px;
+        content: url('../images/mainPage-menu-before.png');
+
+        position: absolute;
+        left: 0;
+        margin-top: 3px;
+
+        font-family: third-ff;
+        vertical-align: middle;
+    }
+
+    &__item:hover:after {
+        line-height: 24.4px;
+        content: "\f2ee";
+        margin-left: 10px;
+
+        font-family: third-ff;
+        vertical-align: middle;
+    }
+
+    &__button {
+      
+    }
+  }
 }
 
 @media screen and (max-width: 460px) {
@@ -80,6 +138,10 @@
     height: 160px;
     position: relative;
   }
+
+  .header-menu {
+    padding: 130px 80px 90px;
+}
 
   .header-logo, .header-menu__button {
     margin: 15px;

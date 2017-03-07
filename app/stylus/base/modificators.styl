@@ -1,0 +1,99 @@
+// Modificators for different pages pages
+
+// Name in list of modificators complains with name of the modificator and name of the page
+// List is for easily search through the document
+
+// LIST OF MODIFICATORS:
+
+// MAIN PAGE
+
+/////////////////////////////MAIN PAGE///////////////////////////////
+
+.main-page {
+    
+    .header-wrapper {
+        text-align: center;
+    }
+    
+    .header-logo {
+        width: auto;
+        margin: 60px 0;
+
+        display: inline-block;
+        position: inherit;
+    }
+    
+    .header-logo__image {
+        width: 44px;
+        
+        display: inline-block;
+        position: inherit;
+        vertical-align: middle;
+    }
+    
+    .header-logo__text {
+        display: inline-block;
+        vertical-align: middle;
+
+        position: relative;
+        top: -2px;
+
+        font-family: secondary-ff;
+        font-size: 62px;
+        text-transform: uppercase;
+        color: dandelion;
+    }
+
+    .header-menu_close:before {
+        content: "\f136";
+        color: white;
+
+        font-family: third-ff;
+        font-size: 60px;
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-page {
+        .header-wrapper {
+            text-align: right;
+        }
+        
+        .header-logo {
+            width: auto;
+            margin: 60px 45px 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+  .main-page {
+    .header {
+        align-items: initial;
+        height: 160px;
+        position: relative;
+    }
+
+    .header-wrapper {
+        text-align: center;
+    }
+
+    .header-menu__button {
+        margin: 15px;
+    }
+
+    .header-logo{
+        margin: 75px 0 0;
+    }
+
+    .header-logo__text {
+        font-size: 55px;
+    }
+
+    .header-logo__image {
+        width: 40px;
+    }
+  }
+}
+/////////////////////////////END OF MAIN PAGE///////////////////////////////
