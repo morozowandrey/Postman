@@ -5,7 +5,7 @@ $(document).ready(function(){
 
   // MOBILE MENU
     $(".menu").on("click", function(e){
-        $(".header-menu").toggleClass("hidden");
+        $("#header-menu").toggleClass("hidden");
         $(".menu-global").toggleClass("menu-global_white");
     })
 

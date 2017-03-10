@@ -1,0 +1,172 @@
+.footer {
+    margin: 0 30px;
+
+    &__logo {
+
+        &-box {
+
+        }
+
+        &-text {
+            font-family: secondary-ff;
+            line-height: 1.32;
+            letter-spacing: 0.4px;
+            font-size: 21px;
+            font-weight: 300;
+            text-transform: uppercase;
+
+            color: warm-grey;
+        }
+    }
+
+    &__header {
+        width: 175px;
+        position: relative;
+    }
+
+    &__header:before {
+        content: '';
+        background: warm-grey;
+        height: 1px;
+        width: 1000%;
+        margin-top: 5px;
+        position: absolute;
+        right: -949%;
+        bottom: 5px;
+        left: 93.5%;
+        z-index: 5;
+    }
+
+    &-nav {
+        padding: 0 15% 0 20%;
+
+        margin: 25px 0 60px;
+
+        &__box1, &__box2, &__box3 {
+            display: inline-block;
+            vertical-align: top;
+
+            margin-right: 15%;
+        }
+
+        &__box2 {
+
+        }
+
+        &__box3 {
+            margin-right: 0;
+
+        }
+
+        &__link {
+            font-family: secondary-ff;
+            font-size: 20px;
+            line-height: 1.5;
+            letter-spacing: 0.4px;
+
+            display: table;
+
+            color: warm-grey;
+        }
+    }
+
+    &-contacts {
+
+        &__fb, &__youtube {
+            display: none;
+        }
+
+        &__fb:after, &__youtube:after {
+            font-family: third-ff;
+
+            content: "\f343";
+            color: warm-grey;
+
+            transform: scale(2,2);
+            padding-top: 10px;
+        }
+
+        &__youtube {
+            
+        }
+
+        &__youtube:after {
+            content: "\f409"; 
+        }
+    }
+
+}
+
+@media screen and (max-width: 835px) {
+    .footer-nav__box1, .footer-nav__box2 {
+        margin-right: 10%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .footer-contacts {
+        display: inline-block;
+    }
+
+    .footer-nav {
+        padding: 0;
+    }
+
+    .footer-contacts__fb, .footer-contacts__youtube {
+        display: inline-block;
+        margin: 5px 0 0 20px;
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+    .footer-contacts {
+        display: inline-block;
+    }
+
+    .footer-nav  {
+        padding: 0;
+    }
+
+    .footer-nav__box1, .footer-nav__box2, .footer-nav__box3, .footer-contacts  {
+        display: block;
+        margin: 0 auto;
+        width: 130px;
+    }
+
+    .footer-contacts__fb, .footer-contacts__youtube {
+        display: inline-block;
+        margin: 30px 0 0 20px;
+        font-size: 30px;
+    }
+
+    .footer-contacts__fb {
+        margin: 30px 0 0 0px;
+    }
+
+    .footer__logo-box {
+        margin-left: 60px;
+        width: 175px;
+    }
+
+    .footer__header:before {
+        left: 127.5%;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+    .footer {
+    }
+
+    .footer-nav {
+        padding: 0;
+    }
+
+    .footer-contacts__fb {
+        margin-left: 0;
+    }
+
+}

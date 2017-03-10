@@ -1,0 +1,67 @@
+.cases {
+    position: relative;
+
+    &__heading {
+        max-width: 490px;
+
+        font-size: 30px;
+        color: white;
+        line-height: 1.4;
+        letter-spacing: 0.6px;
+    }
+
+}
+
+.navigation-box_mainPage {
+    width: 46%;
+    position: relative;
+}
+
+.header-menu_mainPage {
+    max-width: 580px;
+    padding: 30px 0 40px 60px;
+    right: 0;
+    float: right;
+    position: relative;
+}
+
+.header-item_mainPage:hover:before {
+    content: url('../images/menu-before_short.png');
+}
+
+////////////////////////////////////////////////
+
+.dots {
+    width: 54%;
+    float: left;
+    position: relative;
+
+    &__clipBox {
+        position: absolute;
+        bottom: 48%;
+        left: -26%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    &__clip:before {
+        display: none;
+    }
+
+    &__img {
+        max-width: 700px;
+        margin-bottom: 160px;
+        margin-right: 75px;
+    }
+
+    &__caption {
+
+    }
+}
+
+
+.clip__img {
+    position: absolute;
+    top: 15px;
+}
