@@ -48,7 +48,7 @@
     left: 44%;
 }
 
-.black-heading:before {
+.black-heading:before, .skills__heading:before {
     right: -949%;
     left: 50.5%;
 }
@@ -103,7 +103,24 @@
 
 .geoshamanism__heading {
     margin: 0 auto;
+    margin-bottom: 30px;
 }
+
+///////////////////////////////////////////
+
+.skills__heading {
+    width: 330px;
+    margin: 0 0 175px;
+}
+
+.skills__heading:before {
+    left: 45.5%;
+}
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
 
 @media screen and (max-width: 1340px) {
     
@@ -112,9 +129,9 @@
     }
 
     .dots__clipBox {
-        bottom: -123px;
+        bottom: -123px !important;
         right: 0;
-        left: initial;
+        left: initial !important;
         position: absolute;
         width: 580px;
     }
@@ -141,12 +158,6 @@
         display: none;
     }
 
-    .navigation-box_mainPage {
-        width: 75%;
-        margin: 0 auto;
-        float: initial;
-    }
-
     .header-menu_mainPage {
         float: initial;
         margin: 0 auto;
@@ -160,6 +171,10 @@
     .cases__heading {
         margin: 0 auto;
         margin-bottom: 15px;
+    }
+
+    .dots__clip:after {
+        left: 45%;
     }
 }
 
@@ -176,9 +191,9 @@
 
 @media screen and (max-width: 500px) {
 
-    .navigation-box_mainPage {
-        width: 100%;
-    }
+    // .navigation-box_mainPage {
+    //     width: 100%;
+    // }
 
     .cases__heading {
         font-size: 25px;
