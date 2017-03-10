@@ -1,0 +1,31 @@
+.geoshamanism {
+    text-align: center;
+
+    &__heading {
+        margin-bottom: 30px;
+    }
+
+    &__caption, &__link {
+        color: white;
+        font-family: secondary-ff;
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+    }
+
+    &__link {
+        position: relative;
+    }
+
+    &__link:before {
+        content: url(../images/arrow-pointer.png);
+        position: absolute;
+        left: -60px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .geoshamanism__link {
+        display: none;
+    }
+}
