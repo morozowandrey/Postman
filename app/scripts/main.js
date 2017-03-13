@@ -2,6 +2,15 @@ $(document).ready(function(){
 
   //POPUPS
   $('.preview-video__play').magnificPopup();
+  $('.ytp-thumbnail-overlay-image').magnificPopup({
+    items: [
+      {
+        src: 'http://vimeo.com/123123',
+        type: 'iframe'
+      },
+      
+    ]
+});
 
   // MOBILE MENU
     $(".menu").on("click", function(e){
