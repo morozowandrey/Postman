@@ -1,5 +1,5 @@
 .awards {
-    margin: 0 30px;
+    margin: 0 15px;
 
     &-header {
 
@@ -56,12 +56,9 @@
     &-description {
 
         &__text {
-            // padding: 15px 19% 0 35%;
-
-            width: 46%;
-            float: left;
-            margin-left: 10px;
+            padding-left: 200px;
             margin-top: 10px;
+            padding-right: 55px;
 
             &-content {
                 font-size: 20px;
@@ -133,7 +130,7 @@
         opacity: 0;
 
         width: 100%;
-        height: 81.4%;
+        height: 99%;
 
         position: absolute;
         top: 0;
@@ -153,40 +150,46 @@
     }
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 980px) {
     
     .preview {
-        width: 66%;
+        width: 580px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        float: initial;
+        display: inherit;
+    }
+
+    .award {
+        width: 100%;
+        height: 110px;
+        margin-top: -5px;
+        float: initial;
+        display: inherit;
+    }
+
+    .award__image {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    .preview__discription {
+        text-align: center;
     }
 
     .preview-description__text {
-        width: 30.5%;
-        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .preview:nth-child(even) {
-        margin-left: 0;
-    }
-
-    .preview-video-box {
-        height: 80%;
+        margin: 0 auto;
+        margin-bottom: 40px;
     }
 }
 
 
-@media screen and (max-width: 520px) {
-
-    .awards {
-        margin: 0;
-    }
-
-    .awards-heading__text {
-        margin: 60px auto 70px;
-    }
-
-    .award {
-        margin-top: -50px;
-    }
+@media screen and (max-width: 610px) {
     
     .preview {
         width: 100%;
@@ -196,10 +199,11 @@
         display: none;
     }
 
-    .preview-description__text {
-        width: 40%;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+    .award__text_left {
+        width: 100%;
+    }
+
+    .award {
+        height: 95px;
     }
 }

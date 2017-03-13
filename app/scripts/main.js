@@ -2,15 +2,6 @@ $(document).ready(function(){
 
   //POPUPS
   $('.preview-video__play').magnificPopup();
-  $('.ytp-thumbnail-overlay-image').magnificPopup({
-    items: [
-      {
-        src: 'http://vimeo.com/123123',
-        type: 'iframe'
-      },
-      
-    ]
-});
 
   // MOBILE MENU
     $(".menu").on("click", function(e){
@@ -72,9 +63,7 @@ $(document).ready(function(){
         var elementClick = $(this).attr("href"); 
         var destination = $(elementClick).offset().top;
 
-        $('body').animate({
-          scrollTop:destination
-        }, 1000 );
+        $('body').animate();
     });
 
   //NAV
