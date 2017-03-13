@@ -63,7 +63,9 @@ $(document).ready(function(){
         var elementClick = $(this).attr("href"); 
         var destination = $(elementClick).offset().top;
 
-        $('body').animate();
+        $('body').animate({
+          scrollTop:destination
+        }, 1000 );
     });
 
   //NAV
