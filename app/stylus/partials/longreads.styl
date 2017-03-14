@@ -1,0 +1,36 @@
+.longreads {
+    margin-bottom: 100px;
+    padding: 0 30px;
+}
+
+.longread {
+    float: left;
+    width: 48%;
+    margin: 0 0 70px 4%;
+
+    &__img {
+        height: auto;
+        width: 100%;
+    }
+
+    &__description {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+.longread:nth-child(2n + 1) {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 778px) {
+
+    .longread {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .longreads {
+        margin-bottom: 30px;
+    }
+}
