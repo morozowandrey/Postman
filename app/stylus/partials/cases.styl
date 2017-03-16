@@ -39,7 +39,7 @@
 
     &__clipBox {
         position: absolute;
-        bottom: 48%;
+        top: 222px;
         left: -26%;
 
         display: flex;
@@ -71,14 +71,25 @@
     .cases {
         margin-bottom: 240px;
     } 
+    .dots__clipBox {
+        top: initial;
+    }
 }
 
-@media screen and (max-width: 778px) {
+@media screen and (max-width: 1000px) {
 
     .navigation-box_mainPage {
         width: 75%;
         margin: 0 auto;
         float: initial;
+    }
+
+    .dots {
+        display: none;
+    }
+
+    .header-menu_mainPage {
+        max-width: 100%;
     }
 }
 

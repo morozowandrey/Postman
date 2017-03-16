@@ -57,7 +57,7 @@ $(document).ready(function(){
   });
 
   //ANKERS
-    $('a[href^="#"]').on("click", function (e) {
+    $('.navigation-list a[href^="#"]').on("click", function (e) {
         e.preventDefault();
 
         var elementClick = $(this).attr("href"); 
