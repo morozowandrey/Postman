@@ -1,0 +1,95 @@
+.twoxtwo-jumbotron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 75px;
+    position: relative;
+
+    min-height: 520px;
+    overflow: hidden;
+
+    &__text {
+        position: absolute;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+}
+
+.twoxtwo-reliefs {
+    padding: 0 15px;
+        
+        &__content {
+            margin-bottom: 60px;
+        }
+    }
+
+.reliefs {
+
+    &-textbox {
+        width: 40%;
+        float: left;
+
+        &__text {
+            padding-bottom: 40px;
+        }
+
+        &__text:lust-of-type {
+            padding-bottom: 0px;
+        }
+    }
+
+    &__img {
+        float: right;
+
+    }
+
+}
+
+.overlay {
+    position: absolute;
+}
+
+.ytp-pause-overlay {
+    bottom: 90px;
+}
+
+@media screen and (max-width: 1095px) {
+
+    .twoxtwo-reliefs__content {
+        text-align: center;
+    }   
+
+    .reliefs-textbox {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .reliefs-textbox__text {
+        padding-bottom: 40px;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .reliefs__img {
+        float: initial;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .twoxtwo-jumbotron {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    .reliefs-textbox__text {
+        padding-bottom: 40px;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
