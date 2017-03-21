@@ -14,6 +14,7 @@
         text-transform: uppercase;
         font-size: 30px;
         font-weight: 800;
+        user-select: none;
     }
 
 }
@@ -48,8 +49,17 @@
 
 }
 
-.overlay {
+.twoxtwo-video-box {
     position: absolute;
+}
+
+.overlay {
+    width: 100%
+    min-height: 520px;
+
+    position: absolute;
+    top: 85px;
+    z-index: 100;
 }
 
 .ytp-pause-overlay {
