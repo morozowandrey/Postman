@@ -25,6 +25,10 @@ gulp.task('img:production', function () {
     gulp.src('dev/images/**/*.*')
         .pipe(gulp.dest(config.path.production.images));
 });
+gulp.task('models:production', function () {
+    gulp.src('dev/models/**/*.*')
+        .pipe(gulp.dest(config.path.production.models));
+});
 gulp.task('view:production', function () {
     gulp.src('dev/*.html')
         // .pipe(htmlmin({collapseWhitespace: true}))

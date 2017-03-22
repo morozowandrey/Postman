@@ -20,6 +20,7 @@ gulp.task('dev', [
     'css',
     'font',
     'image',
+    'models',
     'bower',
 ]);
 
@@ -53,6 +54,11 @@ gulp.task('css', function () {
 gulp.task('image', function () {
     gulp.src(config.path.app.images) //Выберем наши картинки
         .pipe(gulp.dest(config.path.dev.images)) //И бросим в build
+});
+
+gulp.task('models', function () {
+    gulp.src(config.path.app.models) //Выберем наши картинки
+        .pipe(gulp.dest(config.path.dev.models)) //И бросим в build
 });
 
 gulp.task('font', function () {

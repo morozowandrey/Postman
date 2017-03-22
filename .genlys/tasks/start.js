@@ -31,6 +31,9 @@ gulp.task('watch', function () {
     watch([config.path.watch.images], function (event, cb) {
         gulp.start(['image']);
     });
+    watch([config.path.watch.models], function (event, cb) {
+        gulp.start(['models']);
+    });
     watch([config.path.watch.fonts], function (event, cb) {
         gulp.start(['font']);
     });
