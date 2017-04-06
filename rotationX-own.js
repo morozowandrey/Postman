@@ -10,44 +10,35 @@ window.onload = function() {
     // WORLD
     var scene = new THREE.Scene();
     var camera= new THREE.PerspectiveCamera(45, document.querySelector('.georoll').offsetWidth/document.querySelector('.georoll').offsetHeight, 0.1, 5000);
-    camera.position.set (0, 0, 1000);
-
-    var controls = new THREE.TrackballControls( camera );
-        controls.rotateSpeed = 10;
-        controls.noZoom = true;
-        controls.noPan = true;
-        controls.dynamicDampingFactor = 0.08;
-        controls.addEventListener ('change', render);
+    camera.position.set (0, 0, 460);
+    scene.position.set (0, -185, 0);
 
     // OBJECT
     var objLoader = new THREE.OBJLoader();
-    var mesh = objLoader.load("models/Nepal_Google_paralell.obj",
-    function(mesh){ 
-        scene.add(mesh);
+    var roll = objLoader.load("models/Nepal_Google_paralell.obj",function(roll){ 
+        scene.add(roll);
     });
 
     // LIGHT
     var light= new THREE.AmbientLight(0xffffff);
     scene.add (light);
 
-    loop();
-    function loop() {
-        requestAnimationFrame(function(){loop()});
-        renderer.render(scene, camera);
-    };
+    controls = new THREE.TrackballControls( camera );
 
-    // ANIMATION
-    animate();
-    function animate () {
-        requestAnimationFrame(animate);
-        controls.update();
-    };
+	controls.rotateSpeed = 10;
+	controls.zoomSpeed = 0.02;
+	controls.panSpeed = 0.8;
 
     // RENDER
     var render = function () {
-        controls.update();
-        requestAnimationFrame(render);
+
+        controls.update(camera);
+        renderer.render(scene, camera);
+
+        requestAnimationFrame(function (){
+            render();
+        });
     };
-    
-    renderer.render(scene, camera);
+    render(); 
+
 }
