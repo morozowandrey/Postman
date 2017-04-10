@@ -85,8 +85,7 @@ var mtlLoader = new THREE.MTLLoader();
 /////////////////////// EO OBGECT LOADING /////////////////////// 
 
 
-/////////////////////// MOUSE CONTROLL /////////////////////// 
-/* */
+/////////////////////// MOUSE CONTROLL ///////////////////////
 var isDragging = false;
 var previousMousePosition = {
     x: 0,
@@ -120,7 +119,6 @@ $(renderer.domElement).on('mousedown', function(e) {
         y: e.offsetY
     };
 });
-/* */
 
 $(document).on('mouseup', function(e) {
     isDragging = false;
@@ -153,19 +151,6 @@ function render() {
 }
 
 render();
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function toRadians(angle) {

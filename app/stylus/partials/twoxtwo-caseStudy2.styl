@@ -28,9 +28,16 @@
     }
 
     &__text {
+        max-width: 475px;
         margin: 0 auto;
         margin-bottom: 55px;
         padding: 0 15px;
+
+        &_bold {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 20px;
+        }
     }
 
     &__text2 {
@@ -58,13 +65,18 @@
     }
 }
 
-#twoxtwo-slider, .slick-dots {
+.caseStudy2-slider, .slick-dots {
     position: initial;
 }
-#twoxtwo-slider, .dark-block__slider-box {
-    float:initial;
-    width: 100%;
-    margin: 0 0 50px 0;
+
+.caseStudy2-slider .slick-list {
+    min-height: 435px;
+}
+.caseStudy2-slider .slick-slide {
+    min-height: 435px;
+}
+.caseStudy2-slider .slider-item__image {
+    min-height: 435px;
 }
 
 @media screen and (max-width: 778px){

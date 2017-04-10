@@ -159,7 +159,7 @@
         float: none;
     }
 
-    .slick-dots {
+.slick-dots {
         right: 0;
         left: 0;
     }
@@ -232,6 +232,10 @@
 .white-block__slider .slick-dots {
     left: -20px;
     right: inherit;
+    position: absolute;
+}
+.dark-block__slider .slick-dots {
+    position: absolute;
 }
 
 .slider-caption {
@@ -250,20 +254,20 @@
 
 ///////////////////////team slider/////////////////////////////
 
-.white-block__slider-box_team {
+.white-block__slider-box_team, .twoxtwo__slider-box {
     width: 100%;
     margin: 0;
 }
 
-#team-slider .slick-slide {
-    width: 100vw;    
+.twoxtwo__slider-box .slick-slide {
+    width: 711px !important;    
 }
 
-#team-slider .slick-list {
+.white-block__slider-box_team .slick-list {
     margin-bottom: 25px;
 }
 
-#team-slider .slick-dots {
+.white-block__slider-box_team .slick-dots {
     position: initial;
     margin-bottom: 20px;
 }
