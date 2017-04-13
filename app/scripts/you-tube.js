@@ -91,5 +91,5 @@ function onPlayerStateChange(event) {
         event.target.playVideo();
     }
 }
-//init all scripts
+// init all scripts
 Page.init();
