@@ -85,18 +85,22 @@ $(document).ready(function(){
 
   // loading preview image for wake-up page video boxes
   ( function() {
-    if ($('.wakeup-video__box')){
-      var videoData = $('.preview-video__play').data('embed');
-      var source = "https://img.youtube.com/vi/"+ videoData +"/sddefault.jpg";
-      var wakeupBox = $('.wakeup-video__box')[0];
-      var image = new Image();
-          image.src = source;
-          image.addEventListener( "load", function() {
-              wakeupBox.prepend( image );
-              $(image).addClass('wakeup-video__img');
-          } );
+    var wakeupBox = $('.wakeup-video__box');
+
+    for(var i = 0; i < wakeupBox.length; i++){
+
+        var watchButton = $('.wakeup-video').children('.preview-video__play');
+        var videoData = $(watchButton[i]).data('embed');
+        var source = "https://img.youtube.com/vi/"+ videoData +"/sddefault.jpg";
+        var image = new Image();
+
+        image.src = source;
+        $(wakeupBox[i]).prepend( image );
+        $(image).addClass('wakeup-video__img');
     }
+
   } )();
+
 
   // YOU-TUBE
 ( function() {
