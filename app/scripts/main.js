@@ -102,7 +102,7 @@ $(document).ready(function(){
   } )();
 
 
-  // YOU-TUBE
+  // YOU-TUBE videos on team page
 ( function() {
 			$('.preview-video__play').on( "click", function() {
 

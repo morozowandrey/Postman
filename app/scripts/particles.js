@@ -2,16 +2,45 @@ function ParticleSlider(a){var b=this;b.sliderId="particle-slider",b.color="#fff
 
 var Page = {
     ParticleSlider: {
-        init: function () {
-            var isMobile = navigator.userAgent &&
-                navigator.userAgent.toLowerCase().indexOf('mobile') >= 0;
-            var isSmall = window.innerWidth < 1000;
-
-            var ps = new ParticleSlider({
+        init: function () {            
+            new ParticleSlider({
                 ptlGap: 7,
                 ptlSize: 1.5,
                 width: 1e9,
-                height: 1e9
+                height: 1e9,
+                mouseForce: 500,            
+            });
+            new ParticleSlider({
+                ptlGap: 7,
+                ptlSize: 1.5,
+                width: 1e9,
+                height: 1e9,
+                mouseForce: 100,
+                sliderId: 'particle-skill',                
+            });
+            new ParticleSlider({
+                ptlGap: 7,
+                ptlSize: 1.5,
+                width: 1e9,
+                height: 1e9,
+                mouseForce: 100,
+                sliderId: 'particle-skill2',                
+            });
+            new ParticleSlider({
+                ptlGap: 7,
+                ptlSize: 1.5,
+                width: 1e9,
+                height: 1e9,
+                mouseForce: 100,
+                sliderId: 'particle-skill3',                
+            });
+            new ParticleSlider({
+                ptlGap: 7,
+                ptlSize: 1.5,
+                width: 1e9,
+                height: 1e9,
+                mouseForce: 100,
+                sliderId: 'particle-skill4',                
             });
         }
     },
