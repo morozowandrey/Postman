@@ -39,7 +39,7 @@ var Page = {
                 ptlSize: 1.5,
                 width: 1e9,
                 height: 1e9,
-                mouseForce: 100,
+                mouseForce: 200,
                 sliderId: 'particle-skill4',                
             });
         }

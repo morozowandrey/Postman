@@ -83,20 +83,23 @@ $(document).ready(function(){
 
 });
 
-  // loading preview image for wake-up page video boxes
+  // loading preview image for video boxes
   ( function() {
-    var wakeupBox = $('.wakeup-video__box');
+    var wakeupBox = $('.wakeup-video__box, .cases-video__box');
+    
+    for(var i = 0; i < wakeupBox.length; i++) {
 
-    for(var i = 0; i < wakeupBox.length; i++){
-
-        var watchButton = $('.wakeup-video').children('.preview-video__play');
+        var watchButton = $('.wakeup-video, .preview-video-box').children('.preview-video__play');
         var videoData = $(watchButton[i]).data('embed');
         var source = "https://img.youtube.com/vi/"+ videoData +"/sddefault.jpg";
         var image = new Image();
 
         image.src = source;
         $(wakeupBox[i]).prepend( image );
-        $(image).addClass('wakeup-video__img');
+
+        if($('body').hasClass('.wake-up')){
+          $(image).addClass('wakeup-video__img');
+        }
     }
 
   } )();
