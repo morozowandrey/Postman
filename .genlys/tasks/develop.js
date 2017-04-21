@@ -23,28 +23,27 @@ gulp.task('dev', [
     'image',
     'models',
     'bower',
-    // 'map',
 ]);
 
 gulp.task('view', function () {
-    gulp.src(config.path.app.html) //Выберем файлы по нужному пути
-        .pipe(gulp.dest(config.path.dev.html)) //Бросим их в папку build
-        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
+    gulp.src(config.path.app.html)
+        .pipe(gulp.dest(config.path.dev.html))
+        .pipe(reload({stream: true}));
 });
 
 gulp.task('script', function () {
-    gulp.src(config.path.app.scripts) //Найдем все файлы js
-        .pipe(gulp.dest(config.path.dev.js)) //Бросим в dev
-        .pipe(reload({stream: true})); //И перезагрузим сервер
+    gulp.src(config.path.app.scripts)
+        .pipe(gulp.dest(config.path.dev.js))
+        .pipe(reload({stream: true}));
 });
 
 gulp.task('style', function () {
-    gulp.src(config.path.app.stylus) //Выберем наш landing.scss
+    gulp.src(config.path.app.stylus)
         .pipe(sourcemaps.init())
         .pipe(stylus())
-        .pipe(prefixer()) //Добавим вендорные префиксы
+        .pipe(prefixer())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(config.path.dev.css)) //И в build
+        .pipe(gulp.dest(config.path.dev.css))
         .pipe(reload({stream: true}));
 });
 
@@ -55,24 +54,14 @@ gulp.task('css', function () {
         .pipe(reload({stream: true}));
 });
 
-// gulp.task('map', function() {
-//   gulp.src('config.path.app.stylus')
-//     .pipe(sourcemaps.init())
-//     .pipe(stylus())
-//     .pipe(sourcemaps.write({includeContent: false, sourceRoot: '.'}))
-//     .pipe(sourcemaps.init({loadMaps: true}))
-//     .pipe(sourcemaps.write())
-//     .pipe(gulp.dest('config.path.dev.css'));
-// });
-
 gulp.task('image', function () {
-    gulp.src(config.path.app.images) //Выберем наши картинки
-        .pipe(gulp.dest(config.path.dev.images)) //И бросим в build
+    gulp.src(config.path.app.images)
+        .pipe(gulp.dest(config.path.dev.images))
 });
 
 gulp.task('models', function () {
-    gulp.src(config.path.app.models) //Выберем наши картинки
-        .pipe(gulp.dest(config.path.dev.models)) //И бросим в build
+    gulp.src(config.path.app.models)
+        .pipe(gulp.dest(config.path.dev.models))
 });
 
 gulp.task('font', function () {
