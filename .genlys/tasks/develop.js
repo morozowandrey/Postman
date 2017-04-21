@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     minhtml = require('gulp-minify-html'),
     babel = require("gulp-babel"),
+    sourcemaps = require('gulp-sourcemaps'),
 
     config = require('../config');
 
@@ -22,6 +23,7 @@ gulp.task('dev', [
     'image',
     'models',
     'bower',
+    // 'map',
 ]);
 
 gulp.task('view', function () {
@@ -38,8 +40,10 @@ gulp.task('script', function () {
 
 gulp.task('style', function () {
     gulp.src(config.path.app.stylus) //Выберем наш landing.scss
+        .pipe(sourcemaps.init())
         .pipe(stylus())
         .pipe(prefixer()) //Добавим вендорные префиксы
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.path.dev.css)) //И в build
         .pipe(reload({stream: true}));
 });
@@ -50,6 +54,16 @@ gulp.task('css', function () {
         .pipe(gulp.dest(config.path.dev.css))
         .pipe(reload({stream: true}));
 });
+
+// gulp.task('map', function() {
+//   gulp.src('config.path.app.stylus')
+//     .pipe(sourcemaps.init())
+//     .pipe(stylus())
+//     .pipe(sourcemaps.write({includeContent: false, sourceRoot: '.'}))
+//     .pipe(sourcemaps.init({loadMaps: true}))
+//     .pipe(sourcemaps.write())
+//     .pipe(gulp.dest('config.path.dev.css'));
+// });
 
 gulp.task('image', function () {
     gulp.src(config.path.app.images) //Выберем наши картинки
