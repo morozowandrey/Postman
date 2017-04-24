@@ -13,14 +13,16 @@
     }
 
     &__heading:after {
-        content: url(../images/white-triangle.svg);
         position: absolute;
         bottom: -34%;
-        left: 40%;
-    }
-
-    &__heading:before {
-        left: 47%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #fff;
     }
     
     &__heading:before {

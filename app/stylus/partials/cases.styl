@@ -1,6 +1,6 @@
 .cases {
     position: relative;
-    // margin-bottom: 110px;
+    margin-bottom: 110px;
 
     &__heading {
         max-width: 490px;
@@ -28,7 +28,8 @@
 }
 
 .header-item_mainPage:hover:before {
-    content: url('../images/menu-before_short.png');
+    width: 55px;
+    overflow: hidden;
 }
 
 ////////////////////////////////////////////////
@@ -62,18 +63,21 @@
     }
 }
 
-
 .clip__img {
     position: absolute;
     top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media screen and (max-width: 1350px) {
     .cases {
-        // margin-bottom: 240px;
+        margin-bottom: 240px;
     } 
     .dots__clipBox {
-        top: initial;
+        top: 100%;
+        right: 0;
+        left: inherit;
     }
 }
 
@@ -98,6 +102,13 @@
 
     .navigation-box_mainPage {
         width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .cases {
+        margin-bottom: 160px;
     }
 }
 

@@ -16,5 +16,8 @@
   ],
   "dependencies": {
     "slick-carousel": "^1.6.0"
+  },
+  "devDependencies": {
+    "html5shiv": "^3.7.3"
   }
 }
