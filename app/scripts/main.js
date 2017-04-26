@@ -126,7 +126,7 @@ $(document).ready(function(){
         // creating iframe with wrapper and push it in inited pop-up
         var div = document.createElement( "div" );
             div.setAttribute('class', 'youtube')
-
+s
             div.append( iframe );
             videoPopup.append( div );
       });
