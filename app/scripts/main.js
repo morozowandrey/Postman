@@ -62,22 +62,24 @@ $(document).ready(function(){
 
         var elementClick = $(this).attr("href"); 
         var destination = $(elementClick).offset().top;
+        console.log(this);
 
-        $('body').animate({
+        $('html,body').animate({
           scrollTop:destination
         }, 1000 );
+        
     });
 
   //NAV
-  $('.navigation-list__link').hover(function(e){
+  $('.navigation-list__link').on('mouseenter', function(e){
 
     var coordLink =  $(this).position();
-    var linkHeight = e.target.getBoundingClientRect().height;
-    var dotHeight = $('.navigation-slider__dot')[0].getBoundingClientRect().height;
     var dot = $('.navigation-slider__dot');
-    var moveTop = coordLink.top
-
-    dot.css('top', moveTop);
+    var linkHeight = parseInt($(e.target).height());
+    var dotHeight = parseInt(dot.height());
+    var moveTop = coordLink.top;
+    
+    $(dot).css('top', moveTop);
 
   })
 
@@ -126,8 +128,7 @@ $(document).ready(function(){
         // creating iframe with wrapper and push it in inited pop-up
         var div = document.createElement( "div" );
             div.setAttribute('class', 'youtube')
-s
-            div.append( iframe );
-            videoPopup.append( div );
+            $(div).append( iframe );
+            $(videoPopup).append( div );
       });
 } )();

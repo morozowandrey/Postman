@@ -1,4 +1,3 @@
-
 // main object
 var Page = {
     checkMobile: function () {
@@ -63,7 +62,15 @@ var Page = {
             return width * ($('.twoxtwo-jumbotron').height() / height);
         }
     },
+
+    // init: function() {
+        
+    // }
+
+    ajaxVideoBlockLoad();
 }
+
+(function(){
 
 //run youtube player
 if(Page.checkMobile()){
@@ -91,5 +98,6 @@ function onPlayerStateChange(event) {
         event.target.playVideo();
     }
 }
+})()
 // init all scripts
 Page.init();
